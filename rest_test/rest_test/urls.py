@@ -15,9 +15,9 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
-# from rest_test.quickstart import urls
+from rest_test.snippets import urls as s_url
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^', include('rest_test.quickstart.urls')),
+    url(r'^', include(s_url)),
 ]
